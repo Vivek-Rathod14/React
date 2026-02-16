@@ -1,0 +1,202 @@
+.sidebar {
+    padding: 20px;
+    padding-left: 50px;
+}
+
+.filter-title {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.view-text {
+    color: #888;
+    margin: 0;
+}
+
+.grid-icons i {
+    margin: 0 8px;
+    font-size: 18px;
+    color: #bbb;
+    cursor: pointer;
+}
+
+.grid-icons .active {
+    color: red;
+}
+
+.sort-dropdown {
+    width: 200px;
+    border-radius: 30px;
+}
+
+.product-card {
+    text-align: center;
+}
+
+.image-wrapper {
+    position: relative;
+    max-width: 100%;
+    background: #f3d9a3;
+
+}
+
+.image-wrapper img {
+    width: 100%;
+}
+
+.discount-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #ff1c6a;
+    color: #fff;
+    padding: 0px 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    margin: 0 5px 0 0;
+}
+
+.product-name {
+    margin-top: 15px;
+    font-weight: 600;
+    display: flex;
+    align-items: flex-start;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+.product-name:hover {
+    color: red;
+}
+
+.price {
+    display: flex;
+    align-items: flex-start;
+    font-weight: 800;
+
+}
+
+.price del {
+    color: #9B9B9B;
+    margin-right: 8px;
+
+}
+
+.star {
+    color: #868686;
+    display: flex;
+    align-items: flex-start;
+    font-size: 12px;
+}
+
+.image-wrapper {
+    position: relative;
+    width: 337px;
+    overflow: hidden;
+}
+
+.image-wrapper img {
+    width: 100%;
+    display: block;
+}
+
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-wrapper img {
+    width: 100%;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.img2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: scale(1.2);
+}
+
+.image-wrapper:hover .img2 {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.image-wrapper:hover .img1 {
+    transform: scale(1.1);
+}
+
+.form-check {
+    color: #868686;
+    border-radius: 0;
+    transition: 0.5s;
+}
+.color{
+    color: #868686;
+    font-size: 16px;
+}
+.form-check:hover .custom-checkbox{
+  border:1px solid red;
+    color: red;
+
+}
+.form-check:hover .form-check-label{
+    color: red;
+
+}
+
+
+.custom-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #868686;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+}
+
+
+.custom-checkbox:checked::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: red; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.sidebar {
+  border-right: 1px solid #eee;
+  padding-right: 20px;
+}
+
+.product-card {
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.img2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.4s ease;
+}
+
+.image-wrapper:hover .img2 {
+  opacity: 1;
+}
+
+.image-wrapper:hover .img1 {
+  opacity: 0;
+}
