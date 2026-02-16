@@ -11,24 +11,44 @@ function App() {
     email: "",
     phone: "",
     img: "",
+    id: null
   })
   const [user, setUser] = useState([])
   useEffect(() => {
-    const ShowData = JSON.parse(localStorage.getItem("user")) || [];
+    const ShowData = JSON.parse(sessionStorage.getItem("user")) || [];
     setUser(ShowData);
   }, [])
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newEmploye = {
-      ...FormData,
-      id: Date.now()
+    const oldData = JSON.parse(sessionStorage.getItem("user")) || []
+
+    if (FormData.id) {
+      const updateData = oldData.map((item) => {
+        return item.id === FormData.id ? FormData : item
+      });
+      sessionStorage.setItem("user", JSON.stringify(updateData))
+      setUser(updateData)
     }
 
-    const oldData = JSON.parse(localStorage.getItem("user")) || []
-    const updatedData = [...oldData, newEmploye]
-    localStorage.setItem("user", JSON.stringify(updatedData))
-
-    setUser(updatedData)
+    else {
+      const newEmploye = {
+        ...FormData,
+        id: Date.now()
+      }
+      const updatedData = [...oldData, newEmploye]
+      sessionStorage.setItem("user", JSON.stringify(updatedData))
+      setUser(updatedData)
+    }
+    setFormData({
+      Ename: "",
+      Eid: "",
+      Ework: "",
+      email: "",
+      phone: "",
+      img: "",
+      id: null
+    })
 
   }
 
@@ -41,10 +61,17 @@ function App() {
     })
   }
   const deleteData = (id) => {
-    const updatedUsers = user.filter((user)=>user.id != id)
+    const updatedUsers = user.filter((user) => user.id != id)
     setUser(updatedUsers);
-    localStorage.setItem("user", JSON.stringify(updatedUsers));
+    sessionStorage.setItem("user", JSON.stringify(updatedUsers));
   };
+  const editData = (id) => {
+    const DataFind = user.find((item) => item.id == id);
+    if (DataFind) {
+      setFormData(DataFind)
+    }
+  };
+
 
   return (
     <>
@@ -140,6 +167,7 @@ function App() {
               <p><span>Email</span> {value.email}</p>
               <p><span>Phone</span> {value.phone}</p>
               <p><span><a href="" style={{ backgroundColor: "red", color: "white", padding: "10px", borderRadius: "10px" }} onClick={() => deleteData(value.id)} >Delete</a></span> </p>
+              <p><span><a style={{ backgroundColor: "yellow", color: "white", padding: "10px", borderRadius: "10px" }} onClick={() => editData(value.id)} >Edit</a></span> </p>
             </div>
           </div>
         ))}
