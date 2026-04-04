@@ -1,0 +1,59 @@
+{
+  "workoras": [
+    {
+      "title": "ed",
+      "skills": "ed",
+      "duration": "",
+      "email": "rathodvivek5500@gmail.com",
+      "description": "fr",
+      "budget": "212",
+      "id": "XsEpbH2T5Ug"
+    },
+    {
+      "title": "rr",
+      "skills": "e",
+      "duration": "",
+      "email": "rathodvivek5500@gmail.com",
+      "description": "rgr",
+      "budget": "12",
+      "id": "pH-jUJFID4A"
+    },
+    {
+      "title": "ede",
+      "skills": "ded",
+      "duration": "",
+      "email": "rathodvivek5500@gmail.com",
+      "description": "ed",
+      "budget": "2",
+      "id": "xzPPeKIliZo"
+    },
+    {
+      "title": "23",
+      "skills": "23",
+      "duration": "",
+      "email": "rathodvivek5500@gmail.com",
+      "description": "A boy who was responsible for manuplating the clock worldwide, mysteries remain",
+      "budget": "2",
+      "id": "rtWuEmOUXZo"
+    },
+    {
+      "title": "efe",
+      "skills": "efe",
+      "duration": "5 days",
+      "email": "rathodvivek5500@gmail.com",
+      "description": "de",
+      "budget": "21",
+      "id": "A4uIexiEJp0"
+    },
+    {
+      "title": "ed",
+      "skills": "ed",
+      "duration": "",
+      "email": "rathodvivek5500@gmail.com",
+      "description": "fef",
+      "budget": "12",
+      "id": "xBSw2rdrO6I"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
